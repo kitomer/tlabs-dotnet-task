@@ -1,0 +1,41 @@
+{
+	"folders": [
+    {
+      "path": ".",
+      "name": "TestApp"
+    },
+    {
+      "path": "./Server/rsc/VueFrontend/",
+      "name": "Vue Frontend"
+    },
+  ],
+  "extensions": {
+    "recommendations": [
+      "ms-dotnettools.csharp",
+    ],
+  },
+  "settings": {
+    // TAB settings
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.formatOnPaste": true,
+    "files.encoding": "utf8bom",
+    "files.trimTrailingWhitespace": false,
+    "json.format.enable": false,
+    "javascript.format.enable": false,
+		"vetur.validation.template": false,
+		"vetur.format.enable": false,
+		"vetur.experimental.templateInterpolationService": false,
+    "csharp.suppressHiddenDiagnostics": true,
+    "omnisharp.enableRoslynAnalyzers": false,
+
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+		"files.exclude": {
+			"**/publish": true
+    },
+    "svg.preview.background": "custom"
+	}
+}
