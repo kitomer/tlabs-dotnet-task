@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>TestApp.Server</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <OutputType>Exe</OutputType>
+    
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <DefaultItemExcludesInProjectFolder>$(DefaultItemExcludesInProjectFolder);packages.lock.json</DefaultItemExcludesInProjectFolder>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.*" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="../../../ToDoList/src/ToDoList.Tracker/ToDoList.Tracker.csproj" />
+    <ProjectReference Include="../../../ToDoList/src/ToDoList.Module/ToDoList.Module.csproj" />
+  </ItemGroup>
+</Project>

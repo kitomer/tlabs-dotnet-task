@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>TestApp.ToDoList.Tracker</AssemblyName>
+    <TargetFramework>net8.0</TargetFramework>
+    <VersionPrefix>0.0.1</VersionPrefix>
+    <OutputType>Library</OutputType>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <DefaultItemExcludesInProjectFolder>$(DefaultItemExcludesInProjectFolder);packages.lock.json</DefaultItemExcludesInProjectFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == '' Or '$(Configuration)' == 'Debug' ">
+    <DebugType>portable</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../ToDoList.Module/ToDoList.Module.csproj" />
+  </ItemGroup>
+
+</Project>
