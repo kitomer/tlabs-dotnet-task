@@ -38,12 +38,12 @@ export default defineComponent({
 
     await todoStore.fetchTasks();
 
-    const newTask = "";
+    const newTask = ref("");
 
     const addTask = () => {
-      if (newTask.trim()) {
-        todoStore.addTask({ title: newTask, isCompleted: false });
-        newTask = "";
+      if (newTask.value.trim()) {
+        todoStore.addTask({ title: newTask.value, isCompleted: false });
+        newTask.value = "";
       }
     };
 
@@ -51,7 +51,7 @@ export default defineComponent({
       await todoStore.deleteTask(task);
     };
 
-    const updateTask = async (task) => {
+    const updateTask = async (task) => {      
       await todoStore.editTask(task);
     };
 

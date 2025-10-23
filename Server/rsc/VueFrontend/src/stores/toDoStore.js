@@ -26,6 +26,7 @@ export const useToDoStore = defineStore("toDoStore", {
     },
 
     async editTask(task) {
+      let body = JSON.stringify(task);
       await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
         method: "PUT",
         headers: {
@@ -38,8 +39,12 @@ export const useToDoStore = defineStore("toDoStore", {
     },
 
     async deleteTask(task) {
-      await fetch(`http://localhost:5000/api/tasks/${task.id}`, {
+      let task_id = task.id;
+      await fetch(`http://localhost:5000/api/tasks/${task_id}`, {
         method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
       }).finally(() => {
         this.fetchTasks();
       });
